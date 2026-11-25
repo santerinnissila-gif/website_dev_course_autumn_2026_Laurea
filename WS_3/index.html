@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      p {
+        color: blue;
+      }
+
+      body {
+        background-color: rgba(211, 211, 211, 0.931);
+      }
+
+      h1 {
+        font-size: 4em;
+      }
+      h1 {
+        color: green;
+      }
+      .content-box {
+        padding: 5px;
+        margin: 5px;
+        background-color: #08cde7;
+        border: 1px solid #e803a7;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid #c80a0a;
+        padding: 20px;
+        text-align: center;
+      }
+
+      th {
+        background-color: #0f813d;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"] {
+        padding: 5px;
+        border: 1px solid #7ad21d;
+        border-radius: 4px;
+      }
+
+      input[type="submit"] {
+        background-color: #9e4caf;
+        color: rgb(11, 236, 45);
+        padding: 10px;
+        border: none;
+        border-radius: 100px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #a04550;
+      }
+      .transition-button {
+        background-color: lightblue;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .transition-button:hover {
+        background-color: rgb(40, 202, 15);
+      }
+      .animation-box {
+        width: 50px;
+        height: 50px;
+        background-color: rgb(238, 194, 144);
+        position: relative;
+        animation: move 2s infinite alternate;
+      }
+
+      @keyframes move {
+        from {
+          left: 0;
+        }
+        to {
+          left: 100px;
+        }
+      }
+      .pseudo-list li:nth-child(odd) {
+        background-color: lightgray;
+      }
+
+      .pseudo-list li:nth-child(even) {
+        background-color: rgb(27, 125, 134);
+      }
+      .filter-image {
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+      }
+
+      .filter-image:hover {
+        filter: grayscale(0%);
+      }
+      .quote {
+        position: relative;
+        padding-left: 20px;
+        font-style: italic;
+      }
+
+      .quote::before {
+        content: "“";
+        font-size: 40px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: lightgray;
+      }
+    </style>
+    <title>My First HTML Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 style="color: red">Welcome to Santeri's Page</h1>
+    <p>Here's me.</p>
+    <img
+      src="santeri_omakuva.jpg"
+      alt="Photo of Santeri"
+      style="width: 200px; height: auto"
+      class="filter-image animation-box"
+    />
+    <blockquote class="quote">The smuggest expression ever btw.</blockquote>
+    <h2>My hobbies</h2>
+    <ol>
+      <li>Padel</li>
+      <li>Gaming</li>
+      <li>Reading</li>
+    </ol>
+    <div class="content-box">
+      <h3>Additional activities</h3>
+      <p>Dungeons & Dragons.</p>
+    </div>
+    <h2>My favorite books</h2>
+    <ul class="pseudo-list">
+      <li>Brandon Sanderson - The Way of Kings</li>
+      <li>J.R.R. Tolkien - The Lord of the Rings</li>
+      <li>Robin Hobb - The Assassin's Apprentice</li>
+      <li>Robin Hobb - Royal Assassin</li>
+    </ul>
+    <p>
+      Visit the
+      <a href="https://www.laurea.fi" class="transition-button"
+        >Laurea website</a
+      >.
+    </p>
+    <table>
+      <tr>
+        <th>Website dev course</th>
+        <th>Effective Communication course</th>
+      </tr>
+      <tr>
+        <td>Task 1 deadline, 10.10.2026</td>
+        <td>Task 1 deadline, 15.10.2026</td>
+      </tr>
+      <tr>
+        <td>Task 2 deadline, 20.10.2026</td>
+        <td>Task 2 deadline, 25.10.2026</td>
+      </tr>
+      <tr>
+        <td>Task 3 deadline, 30.10.2026</td>
+        <td>Task 3 deadline, 5.11.2026</td>
+      </tr>
+    </table>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" /><br /><br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
